@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: <Docker ID>/go-sprint-twelve
+          images: ${{ secrets.DOCKER_USERNAME }}/go-sprint-twelve
           
       - name: Build and push Docker Image
         uses: docker/build-push-action@v5
